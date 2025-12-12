@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkFinder - Найдите работу мечты</title>
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Подключение основного файла стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">WorkFinder</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Компании</a></li>
+                    <li><a href="#">Кандидатам</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Найдите работу своей мечты!</h1>
+            <p>Тысячи вакансий ждут вас. Начните свой поиск прямо сейчас.</p>
+            <div class="search-bar">
+                <input type="text" id="keyword-search" placeholder="Ключевые слова (дизайнер, разработчик)">
+                <input type="text" id="location-search" placeholder="Местоположение (Москва, удаленно)">
+                <button id="search-button" class="button">Найти работу</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container job-listing-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-block filter-block">
+                <h3>Категории</h3>
+                <ul class="filter-list category-filter">
+                    <li><button class="filter-button active" data-filter-type="category" data-filter-value="all">Все</button></li>
+                    <li><button class="filter-button" data-filter-type="category" data-filter-value="development">Разработка</button></li>
+                    <li><button class="filter-button" data-filter-type="category" data-filter-value="design">Дизайн</button></li>
+                    <li><button class="filter-button" data-filter-type="category" data-filter-value="marketing">Маркетинг</button></li>                    <li><button class="filter-button" data-filter-type="category" data-filter-value="sales">Продажи</button></li>
+                    <li><button class="filter-button" data-filter-type="category" data-filter-value="finance">Финансы</button></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block filter-block">
+                <h3>Тип занятости</h3>
+                <ul class="filter-list employment-type-filter">
+                    <li><button class="filter-button active" data-filter-type="employment" data-filter-value="all">Все</button></li>
+                    <li><button class="filter-button" data-filter-type="employment" data-filter-value="full-time">Полная занятость</button></li>
+                    <li><button class="filter-button" data-filter-type="employment" data-filter-value="part-time">Частичная занятость</button></li>
+                    <li><button class="filter-button" data-filter-type="employment" data-filter-value="remote">Удаленная работа</button></li>
+                    <li><button class="filter-button" data-filter-type="employment" data-filter-value="internship">Стажировка</button></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block promo-banner">
+                <h3>Ищете сотрудника?</h3>
+                <p>Разместите свою вакансию у нас и найдите лучших специалистов.</p>
+                <a href="#" class="button promo-button">Разместить вакансию</a>
+            </div>
+        </aside>
+
+        <section class="job-listings">
+            <div class="job-grid">
+                <!-- Вакансия 1: Разработчик ПО (Полная занятость) -->
+                <article class="job-card" data-category="development" data-employment="full-time">
+                    <div class="card-header">
+                        <h3 class="job-title">Senior Frontend Developer</h3>
+                        <span class="job-type employment-full-time">Полная занятость</span>
+                    </div>
+                    <p class="company-name">TechSolutions Inc.</p>
+                    <p class="location">Москва, Россия</p>
+                    <p class="job-description">Разработка пользовательских интерфейсов для высоконагруженных веб-приложений с использованием React/Angular. Опыт от 3 лет.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+
+                <!-- Вакансия 2: Графический дизайнер (Удаленная работа) -->
+                <article class="job-card" data-category="design" data-employment="remote">
+                    <div class="card-header">
+                        <h3 class="job-title">Графический дизайнер</h3>
+                        <span class="job-type employment-remote">Удаленная работа</span>
+                    </div>
+                    <p class="company-name">Creative Studio</p>
+                    <p class="location">Удаленно</p>
+                    <p class="job-description">Создание дизайна для сайтов, мобильных приложений и маркетинговых материалов. Владение Figma, Adobe Creative Suite.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+
+                <!-- Вакансия 3: Менеджер по продажам (Полная занятость) -->
+                <article class="job-card" data-category="sales" data-employment="full-time">
+                    <div class="card-header">
+                        <h3 class="job-title">Менеджер по продажам B2B</h3>
+                        <span class="job-type employment-full-time">Полная занятость</span>
+                    </div>
+                    <p class="company-name">Global Market Group</p>
+                    <p class="location">Санкт-Петербург, Россия</p><p class="job-description">Развитие клиентской базы, проведение переговоров и заключение сделок. Опыт работы с CRM обязателен.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+
+                <!-- Вакансия 4: Junior Backend Developer (Стажировка) -->
+                <article class="job-card" data-category="development" data-employment="internship">
+                    <div class="card-header">
+                        <h3 class="job-title">Junior Backend Developer</h3>
+                        <span class="job-type employment-internship">Стажировка</span>
+                    </div>
+                    <p class="company-name">Startup Innovations</p>
+                    <p class="location">Екатеринбург, Россия</p>
+                    <p class="job-description">Участие в разработке серверной части приложений на Python/Node.js. Отличный старт для выпускников.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+
+                <!-- Вакансия 5: SMM-специалист (Частичная занятость) -->
+                <article class="job-card" data-category="marketing" data-employment="part-time">
+                    <div class="card-header">
+                        <h3 class="job-title">SMM-специалист</h3>
+                        <span class="job-type employment-part-time">Частичная занятость</span>
+                    </div>
+                    <p class="company-name">Digital Growth Agency</p>
+                    <p class="location">Удаленно</p>
+                    <p class="job-description">Разработка и реализация стратегий продвижения в социальных сетях. Опыт работы с контентом и таргетом.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+
+                <!-- Вакансия 6: Финансовый аналитик (Полная занятость) -->
+                <article class="job-card" data-category="finance" data-employment="full-time">
+                    <div class="card-header">
+                        <h3 class="job-title">Финансовый аналитик</h3>
+                        <span class="job-type employment-full-time">Полная занятость</span>
+                    </div>
+                    <p class="company-name">Capital Invest</p>
+                    <p class="location">Москва, Россия</p>
+                    <p class="job-description">Анализ финансовых данных, подготовка отчетов и прогнозов. Высшее экономическое образование.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+
+                <!-- Вакансия 7: UX/UI Дизайнер (Полная занятость) -->
+                <article class="job-card" data-category="design" data-employment="full-time">
+                    <div class="card-header">
+                        <h3 class="job-title">UX/UI Дизайнер</h3>
+                        <span class="job-type employment-full-time">Полная занятость</span>
+                    </div>
+                    <p class="company-name">ProductLabs</p>
+                    <p class="location">Новосибирск, Россия</p>
+                    <p class="job-description">Проектирование пользовательских интерфейсов, создание прототипов и проведение исследований.</p>
+                    <a href="#" class="button apply-button">Откликнуться</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 WorkFinder. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a>
+            </div>
+            <div class="social-links"><a href="#">VK</a> | <a href="#">TG</a> | <a href="#">LinkedIn</a></div>  </div>
+    </footer>
+
+    <!-- Подключение файла скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>
